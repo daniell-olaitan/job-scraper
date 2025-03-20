@@ -84,7 +84,7 @@ class JobSraper:
         return True
 
     async def run(self):
-        browser = await self.browser_type.launch(headless=False)
+        browser = await self.browser_type.launch(headless=True)
         self.page = await browser.new_page()
 
         await self.page.goto(self.base_url, timeout=60000)
